@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <section>
+        <div class="header">
+            <div class="img">
+               <div class="para">
+                <h1 class="topic">INDIA TRAVEL GUIDE</h1>
+                <P  class="topic1">Tips for visiting India</P>
+               </div>
+        </div>
+        </div>
+        <div class="video-grid">
+               <div *ngFor="let i of indiaList" class="card">
+  <iframe width="300" height="200" [src]="i.videoLink | safe"></iframe>
+  <h3>{{i.name}}</h3>
+  <p>{{i.description}}</p>
+  <p>{{i.location}} - {{i.country}}</p>
+</div>
+</div>
+
+        
+    </section>
+</body>
+</html>

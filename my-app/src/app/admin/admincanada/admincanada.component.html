@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="admin-container">
+  <h2>Add Canada Video</h2>
+
+  <form #canadaForm="ngForm" (ngSubmit)="saveData(canadaForm)">
+
+    <input
+      [(ngModel)]="canada.videoLink"
+      name="videoLink"
+      placeholder="Video Link"
+      required
+      #videoLink="ngModel">
+    <div *ngIf="videoLink.invalid && videoLink.touched" class="error">
+      Video Link is required.
+    </div>
+
+    <input
+      [(ngModel)]="canada.name"
+      name="name"
+      placeholder="Name"
+      required
+      minlength="3"
+      #name="ngModel">
+    <div *ngIf="name.invalid && name.touched" class="error">
+      Name is required and must be at least 3 characters.
+    </div>
+
+    <input
+      [(ngModel)]="canada.description"
+      name="description"
+      placeholder="Description"
+      required
+      #description="ngModel">
+    <div *ngIf="description.invalid && description.touched" class="error">
+      Description is required.
+    </div>
+
+    <input
+      [(ngModel)]="canada.location"
+      name="location"
+      placeholder="Location"
+      required
+      #location="ngModel">
+    <div *ngIf="location.invalid && location.touched" class="error">
+      Location is required.
+    </div>
+
+    <input
+      [(ngModel)]="canada.country"
+      name="country"
+      readonly>
+
+    <button type="submit" [disabled]="canadaForm.invalid">Save</button>
+
+  </form>
+</div>
+
+</body>
+</html>

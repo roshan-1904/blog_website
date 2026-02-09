@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+
+
+<div class="admin-wrapper">
+  <div class="admin-card">
+    <h2>Add India Video</h2>
+
+    <form #indiaForm="ngForm" (ngSubmit)="saveData(indiaForm)" class="form">
+
+      <input class="field" type="text" placeholder="Video Link" [(ngModel)]="india.videoLink"   name="videoLink"  required        #videoLink="ngModel">
+      <div *ngIf="videoLink.invalid && videoLink.touched" class="error">
+        Video Link is required.
+      </div>
+
+      <input class="field" type="text" placeholder="Name" [(ngModel)]="india.name"  name="name"  required minlength="3" #name="ngModel">
+      <div *ngIf="name.invalid && name.touched" class="error">
+        Name is required and must be at least 3 characters.
+      </div>
+
+      <input class="field" type="text" placeholder="Description" [(ngModel)]="india.description"  name="description"  required #description="ngModel">
+      <div *ngIf="description.invalid && description.touched" class="error">
+        Description is required.
+      </div>
+
+      <input class="field" type="text" placeholder="Location" [(ngModel)]="india.location" name="location"  required #location="ngModel">
+      <div *ngIf="location.invalid && location.touched" class="error">
+        Location is required.
+      </div>
+
+      <input
+        class="field"  type="text"  placeholder="Country" [(ngModel)]="india.country" name="country"   required #country="ngModel">
+      <div *ngIf="country.invalid && country.touched" class="error">
+        Country is required.
+      </div>
+
+      <button type="submit" class="save-btn" [disabled]="indiaForm.invalid">Save</button>
+
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+             <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+      <header>
+        <div class="left">
+        <div class="admin"> admin </div>
+              <div class="home">
+
+                <div class="desination">DESINATION <img src="https://cdn-icons-png.flaticon.com/512/724/724816.png" alt="" width="17" height="14">
+                  <ul class="dropdown">
+      <li (click)="goToadminindia()">India</li>
+      <li (click)="goToadminusa()">USA</li>
+      <li (click)="goToadmincanada()">Canada</li>
+    </ul>
+                </div>
+                <div class="cetegortes" >CETEGORTES <img src="https://cdn-icons-png.flaticon.com/512/724/724816.png" alt="" width="17" height="14">
+                            <ul class="dropdown">
+      <li>GAMES</li>
+      <li>COOKING</li>
+      <li>CELEBRATION</li>
+    </ul>
+            </div>
+                 <div class="gallery" (click)="goToadmingallery()">GALLERY <img src="https://cdn-icons-png.flaticon.com/512/724/724816.png" alt="" width="17" height="14"></div>
+              <div class="Feedback" (click)="goTofeedback()">FEEDBACK <img src="https://cdn-icons-png.flaticon.com/512/724/724816.png" alt="" width="17" height="14"></div>
+              </div>
+        </div>
+        
+    
+           <div class="page-container">
+
+  <app-adminindia *ngIf="activePage === 'india'"></app-adminindia>
+
+  <app-adminusa *ngIf="activePage === 'usa'"></app-adminusa>
+
+  <app-admincanada *ngIf="activePage === 'canada'"></app-admincanada>
+
+  <app-feedback *ngIf="activePage === 'feedback'"></app-feedback>
+
+  <app-admingallery *ngIf="activePage === 'gallery'"></app-admingallery>
+
+</div>
+
+        
+      </header>
+</body>
+</html>

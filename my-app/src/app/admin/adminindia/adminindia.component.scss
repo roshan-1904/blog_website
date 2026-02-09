@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    padding: 0% 20px;
+}
+
+.admin-wrapper{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #272a35, #20132c);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.admin-card{
+  background: #fff;
+  padding: 30px 35px;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: pop 0.5s ease;
+}
+
+.admin-card h2{
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field{
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.field:focus{
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102,126,234,0.2);
+}
+
+.save-btn{
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+@keyframes pop{
+  from{ transform: scale(0.9); opacity:0; }
+  to{ transform: scale(1); opacity:1; }
+}
+
+.field.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.save-btn:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}

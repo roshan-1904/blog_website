@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen */
+  overflow: hidden;
+  color: white;
+}
+
+.video iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  object-fit: cover; 
+  z-index: -1; 
+  pointer-events: none; 
+}
+
+.content {
+  position: relative;
+  z-index: 1; 
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+}

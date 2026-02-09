@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+// .admin-container {
+//     background-color: #111;
+//     color: #f7f7f7;         
+//     width: 400px;
+//     max-width: 90%;
+//     margin: 80px auto;       
+//     padding: 40px 30px;
+//     border-radius: 12px;
+//     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     font-family: 'Montserrat', sans-serif;
+//     transition: transform 0.3s ease;
+// }
+
+// .admin-container:hover {
+//     transform: translateY(-5px);
+// }
+
+
+// .admin-container h2 {
+//     margin-bottom: 30px;
+//     font-size: 26px;
+//     font-weight: 700;
+//     color: #ff6b35; 
+//     text-align: center;
+// }
+
+
+// .admin-container input {
+//     width: 100%;
+//     padding: 12px 15px;
+//     margin: 10px 0;
+//     border-radius: 8px;
+//     border: none;
+//     outline: none;
+//     font-size: 16px;
+//     background-color: #222;  
+//     color: #f7f7f7;
+//     transition: 0.3s;
+// }
+
+// .admin-container input:focus {
+//     background-color: #333;
+//     box-shadow: 0 0 5px #ff6b35;
+// }
+
+
+// .admin-container button {
+//     width: 100%;
+//     padding: 12px;
+//     margin-top: 20px;
+//     border: none;
+//     border-radius: 8px;
+//     background: #ff6b35;
+//     color: #fff;
+//     font-size: 16px;
+//     font-weight: 600;
+//     cursor: pointer;
+//     transition: 0.3s;
+// }
+
+// .admin-container button:hover {
+//     background: #ff844d;
+//     transform: translateY(-2px);
+// }
+
+
+// .admin-container input::placeholder {
+//     color: #aaa;
+// }
+
+
+// input.ng-touched.ng-invalid {
+//   border: 1px solid red;
+// }
+
+// .error {
+//   color: red;
+//   font-size: 12px;
+//   margin-bottom: 5px;
+// }
+
+// button:disabled {
+//   background-color: gray;
+//   cursor: not-allowed;
+// }
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Montserrat',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(145deg,#0f0f0f,#1a1a1a);
+}
+
+/* Card */
+.admin-container{
+  background:linear-gradient(145deg,#0f0f0f,#1a1a1a);
+  color:#f7f7f7;
+  width:750px;
+  max-width:95%;
+  padding:45px 35px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.7),0 0 15px rgba(255,107,53,0.2);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  backdrop-filter:blur(4px);
+}
+
+/* Title */
+.admin-container h2{
+  margin-bottom:25px;
+  font-size:28px;
+  font-weight:700;
+  color:#ff6b35;
+  text-align:center;
+  text-transform:uppercase;
+}
+
+/* 3 COLUMN GRID */
+.admin-container form{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+/* Inputs */
+.admin-container input{
+  padding:14px 18px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.2);
+  outline:none;
+  font-size:15px;
+  background:rgba(255,255,255,0.05);
+  color:#f7f7f7;
+}
+
+.admin-container input:focus{
+  border-color:#ff6b35;
+  box-shadow:0 0 8px #ff6b35;
+}
+
+/* error and button full row */
+.error,
+.admin-container button{
+  grid-column:span 3;
+}
+
+/* Button */
+.admin-container button{
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(45deg,#ff6b35,#ff844d);
+  color:#fff;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.error{
+  color:red;
+  font-size:12px;
+}
+
+

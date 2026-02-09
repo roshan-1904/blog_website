@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.img{
+    background-image: url(	https://theworldtravelguy.com/wp-content/uploads/2022/10/DSCF9947_gal1.jpg);
+    width: 75%;
+    height: 100vh;
+    margin: 0px 150px ;
+    padding: 18% 0px 0px 0px;
+    background: cover;
+}
+.title{
+    color: #b1aeae;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    padding: 20px 0px 0px 0px;
+
+}
+.subtitle{
+    color: #cac5c5;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+}

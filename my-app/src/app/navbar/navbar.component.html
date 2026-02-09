@@ -1,0 +1,44 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <nav>
+            <div class="title">
+                <div class="img">
+                     <img class=" penci-logo" src="https://theworldtravelguy.com/wp-content/uploads/2023/01/Logo_2.jpg" alt="The World Travel Guy" width="456" height="76">
+                </div>
+
+
+                <div class="menu-toggle" (click)="isOpen = !isOpen"><img src="https://cdn-icons-png.flaticon.com/128/10125/10125982.png" alt="" width="44" height="44"></div>
+                <div class="nav-right"  [class.active]="isOpen">
+                     <div class="home" routerLink="/main">Home</div>
+                     <div class="blog" routerLink="/blog">BLOG</div>
+                     <div class="desination">DESINATION <img src="https://cdn-icons-png.flaticon.com/512/8213/8213476.png" alt="" width="16" height="17">
+                          <div class="dropdown">
+                                           <div class="dropdown-item" routerLink="/india">INDIA</div>
+                                           <div class="dropdown-item" routerLink="/usa">USA</div>
+                                           <div class="dropdown-item" routerLink="/canada">CANADA</div>
+                                           <div class="dropdown-item">AUSTRALIA</div>
+                                           <div class="dropdown-item">GERMANY</div>
+                                           <div class="dropdown-item">FRANCE</div>
+                                           <div class="dropdown-item">JAPAN</div>
+                         </div>
+                    </div>
+                     <div class="categortes">CATEGORTES <img src="https://cdn-icons-png.flaticon.com/512/8213/8213476.png" alt="" width="16" height="17">
+                         <div class="dropdown1">
+                                           <div class="dropdown-item1" routerLink="/games">GAMES</div>
+                                           <div class="dropdown-item1">COOKING</div>
+                                           <div class="dropdown-item1">CELEBRATION</div>
+                                           
+                         </div>
+                    </div>
+                     <div class="gallery" routerLink="/gallery">GALLERY <img src="https://cdn-icons-png.flaticon.com/512/8213/8213476.png" alt="" width="16" height="17"></div>
+                     <div class="about" routerLink="/about">ABOUT</div>
+                     <div class="contact" routerLink="/contact">CONTACT</div>
+                    <div class="logo"><img src="https://cdn-icons-png.flaticon.com/512/11741/11741045.png" alt="" width="16" height="16"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="profile">
+         <img src="	https://theworldtravelguy.com/wp-content/uploads/2023/01/Img_7718_450.jpg" alt="" height="200px" width="305px" >
+         <img src="	https://theworldtravelguy.com/wp-content/uploads/2023/01/DSCF8628_600-585x390.jpg" alt="" height="200px" width="305px">
+         <img src="https://theworldtravelguy.com/wp-content/uploads/2024/05/DSCF3182_600-585x390.jpg" alt="" height="200px" width="305px" >
+         <img src="https://theworldtravelguy.com/wp-content/uploads/2025/02/DSCF0577_600n-585x390.jpg" alt="" height="200px" width="305px">
+        </div>
+         <div class="profile">
+         <img src="	https://theworldtravelguy.com/wp-content/uploads/2023/01/DSCF1787_600-585x390.jpg" alt="" height="200px" width="305px" >
+         <img src="	https://theworldtravelguy.com/wp-content/uploads/2024/05/DSCF4315_600-585x390.jpg" alt="" height="200px" width="305px">
+         <img src="https://theworldtravelguy.com/wp-content/uploads/2024/05/DSCF2839_450.jpg" alt="" height="200px" width="305px">
+         <img src="https://theworldtravelguy.com/wp-content/uploads/2025/02/DSCF2163_600-585x390.jpg" alt="" height="200px" width="305px">
+        </div>
+
+        <div class="about-container">
+  <h6 class="about-title">ABOUT ME</h6>
+
+  <h2 class="name">
+    David
+    <span class="line"></span>
+  </h2>
+
+  <p>
+    Thanks for looking! I'm <strong>David Leiter</strong>, and this is my
+    <span class="highlight">travel blog</span>.
+  </p>
+
+  <p>
+    I'm an American who's been traveling the world full time for 10 years.
+    Nowadays, my second home is
+    <span class="highlight">Bali, Indonesia</span>, where I met my wife Intan.
+  </p>
+
+  <p>
+    I first fell in love with travel on a solo road trip across
+    <span class="highlight">Iceland</span> in 2016. My budget was small, so I
+    slept in the back of a rental car for 1 month while I drove 7,000
+    kilometers around the country, filming all the scenic places in Iceland.
+  </p>
+
+  <p>
+    One of my first videos racked up a few million views and was featured on
+    international TV by <span class="highlight">BBC Travel</span>.
+  </p>
+</div>
+
+
+
+    <section class="contact-section">
+  <p class="small-title">CONTACT</p>
+  <h2>Let's talk!</h2>
+
+  <form #f="ngForm" (ngSubmit)="submit(f)" novalidate>
+
+    <div class="row">
+      <input  type="text"  placeholder="Name*" [(ngModel)]="formData.name" name="name" #name="ngModel" required >
+      <small class="error" *ngIf="name.invalid && name.touched">
+        Name is required
+      </small>
+
+      <input type="email" placeholder="Email*" [(ngModel)]="formData.email" name="email"   #email="ngModel" required email >
+      <small class="error" *ngIf="email.invalid && email.touched">
+        Enter a valid email
+      </small>
+
+      <input type="text" placeholder="Subject*" [(ngModel)]="formData.subject" name="subject" #subject="ngModel" required >
+      <small class="error" *ngIf="subject.invalid && subject.touched">
+        Subject is required
+      </small>
+    </div>
+
+    <textarea placeholder="Your Message*" [(ngModel)]="formData.message" name="message" #message="ngModel" required minlength="10" ></textarea>
+    <small class="error" *ngIf="message.invalid && message.touched">
+      Message must be at least 10 characters
+    </small>
+
+    <button type="submit" [disabled]="f.invalid">
+      SUBMIT
+    </button>
+
+  </form>
+</section>
+
+    </div>
+</body>
+</html>
+

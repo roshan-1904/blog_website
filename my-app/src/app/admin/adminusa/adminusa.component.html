@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="admin-container">
+  <h2>Add USA Video</h2>
+
+  <form #usaForm="ngForm" (ngSubmit)="saveData(usaForm)">
+
+    <input
+      [(ngModel)]="usa.videoLink"
+      name="videoLink"
+      placeholder="Video Link"
+      required
+      #videoLink="ngModel">
+    <div *ngIf="videoLink.invalid && videoLink.touched" class="error">
+      Video Link is required.
+    </div>
+
+    <input
+      [(ngModel)]="usa.name"
+      name="name"
+      placeholder="Name"
+      required
+      minlength="3"
+      #name="ngModel">
+    <div *ngIf="name.invalid && name.touched" class="error">
+      Name is required and must be at least 3 characters.
+    </div>
+
+    <input
+      [(ngModel)]="usa.description"
+      name="description"
+      placeholder="Description"
+      required
+      #description="ngModel">
+    <div *ngIf="description.invalid && description.touched" class="error">
+      Description is required.
+    </div>
+
+    <input
+      [(ngModel)]="usa.location"
+      name="location"
+      placeholder="Location"
+      required
+      #location="ngModel">
+    <div *ngIf="location.invalid && location.touched" class="error">
+      Location is required.
+    </div>
+
+    <input
+      [(ngModel)]="usa.country"
+      name="country"
+      placeholder="Country"
+      readonly>
+
+    <button type="submit" [disabled]="usaForm.invalid">Save</button>
+  </form>
+</div>
+
+</body>
+</html>
