@@ -19,7 +19,7 @@ export class AboutComponent {
 submit(form: NgForm) {
   if (form.invalid) return;
 
-  this.http.post('http://localhost:5000/api/feedback', this.formData)
+  this.http.post('https://blog-website-ebwg.onrender.com/api/feedback', this.formData)
     .subscribe({
       next: () => {
         alert("Message Sent!");
