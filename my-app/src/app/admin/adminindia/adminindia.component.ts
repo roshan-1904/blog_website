@@ -61,7 +61,7 @@ export class AdminindiaComponent {
       return;
     }
 
-    this.http.post("http://localhost:5000/api/adminindia", this.india)
+    this.http.post("https://blog-website-ebwg.onrender.com/api/adminindia", this.india)
       .subscribe({
         next: () => {
           alert("Saved Successfully");

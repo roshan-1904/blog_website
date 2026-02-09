@@ -58,7 +58,7 @@ export class AdmincanadaComponent {
       return;
     }
 
-    this.http.post("http://localhost:5000/api/admincanada", this.canada)
+    this.http.post("https://blog-website-ebwg.onrender.com/api/admincanada", this.canada)
       .subscribe({
         next: () => {
           alert("Canada Data Saved");

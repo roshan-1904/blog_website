@@ -29,7 +29,7 @@ export class GalleryComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get<any[]>("http://localhost:5000/api/gallery")
+    this.http.get<any[]>("https://blog-website-ebwg.onrender.com/api/gallery")
       .subscribe(data => this.galleries = data);
   }
 }

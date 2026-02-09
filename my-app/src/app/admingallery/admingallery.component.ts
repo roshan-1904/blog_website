@@ -53,7 +53,7 @@ export class AdmingalleryComponent {
   constructor(private http: HttpClient) {}
 
   submit() {
-    this.http.post('http://localhost:5000/api/gallery', this.form)
+    this.http.post('https://blog-website-ebwg.onrender.com/api/gallery', this.form)
       .subscribe({
         next: () => {
           alert('Gallery image saved');

@@ -13,7 +13,7 @@ export class UsaComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get<any[]>("http://localhost:5000/api/adminusa")
+    this.http.get<any[]>("https://blog-website-ebwg.onrender.com/api/adminusa")
       .subscribe(data => this.videos = data);
   }
 }
