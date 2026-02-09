@@ -13,7 +13,7 @@ export class IndiaComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-   this.http.get<any[]>("http://localhost:5000/api/adminindia")
+   this.http.get<any[]>("https://blog-website-ebwg.onrender.com/api/adminindia")
 
       .subscribe(res => this.indiaList = res);
   }

@@ -29,7 +29,7 @@ export class FeedbackComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
  ngOnInit() {
-  this.http.get<any[]>('http://localhost:5000/api/feedback')
+  this.http.get<any[]>('https://blog-website-ebwg.onrender.com/api/feedback')
     .subscribe({
       next: data => this.feedbacks = data,
       error: err => console.log(err)
