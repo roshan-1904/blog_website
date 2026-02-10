@@ -63,5 +63,7 @@ goToCanada() {
     this.router.navigate(['/canada']);
   }
 
-  
+  goToAdmin() {
+    this.router.navigate(['/admin']);
+  }
 }
