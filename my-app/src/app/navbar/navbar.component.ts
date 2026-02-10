@@ -7,11 +7,27 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-   isOpen: boolean = false; 
-
+  
+  isMenuOpen = false;
+  isDestinationOpen = false;
+  isCategoryOpen = false;
   constructor( private router:Router) { }
 
+  
+
   ngOnInit(): void {
+  }
+
+    toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  toggleDestination() {
+    this.isDestinationOpen = !this.isDestinationOpen;
+  }
+
+  toggleCategory() {
+    this.isCategoryOpen = !this.isCategoryOpen;
   }
 
   goToHome() {
@@ -46,4 +62,6 @@ export class NavbarComponent implements OnInit {
 goToCanada() {
     this.router.navigate(['/canada']);
   }
+
+  
 }

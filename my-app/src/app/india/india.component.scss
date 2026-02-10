@@ -37,7 +37,7 @@
 
 .video-grid{
   display:grid;
-  grid-template-columns:repeat(3, 1fr); /* 3 per row */
+  grid-template-columns:repeat(3, 1fr); 
   gap:20px;
   max-width:1200px;
   margin:40px auto;
@@ -69,3 +69,35 @@
   color:#555;
 }
 
+ @media (max-width: 768px) {
+  .video-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr); 
+  gap:10px;
+  max-width:500px;
+  margin:20px auto;
+}
+.img{
+  background-image: url("https://theworldtravelguy.com/wp-content/uploads/2024/09/DSCF2468.jpg");
+  width: 75%;
+margin: 0px  12%;
+  
+}
+ 
+}
+
+ 
+  @media (max-width: 426px) {
+     .video-grid{
+  display:grid;
+  grid-template-columns:repeat(1, 1fr); 
+  gap:10px;
+  max-width:500px;
+  margin:20px auto;
+}
+    .img{
+  width: 75%;
+margin: 0px  10%;
+}
+
+  }

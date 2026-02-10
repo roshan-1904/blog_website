@@ -374,43 +374,129 @@ body{
 
 @media(max-width:768px){
 
-  .menu-toggle{
-    display:block;
-    padding: 17px 0px 0px 30%;
+  .penci-logo{
+   width: 260px;
+  height: 50px;
+  margin-top: 10px;
   }
-
   .nav-right{
-    position:absolute;
-    top:70px;
-    right:18px;
-    width:200px;
-    color: #000;
-    background:#4e4b4b;
-    flex-direction:column;
-    align-items:flex-start;
-    padding:5px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.25);
-    border-radius:10px;
-    display:none;
-    z-index:99;
+    gap: 11px;
+    
+   }
+.home{font-size: 10px;}
+ .blog{font-size: 10px;}
+ .desination{font-size: 10px;}
+  .gallery{font-size: 10px;}
+  .about{font-size: 10px;}
+  .contact{font-size: 10px;} 
+  .categortes{font-size: 10px;}
+  .desination img{
+    display: none;
   }
-
-  .nav-right.active{
-    display:flex;
+  .categortes img{
+    display: none;
   }
-
-  .nav-right > div{
-    width:100%;
-    padding:10px;
-    border-bottom:1px solid #eee;
+  .gallery img{
+    display: none;
   }
-
-  .dropdown, .dropdown1{
-    position:static;
-    box-shadow:none;
-    width:100%;
-  }
-  .desination{
-    padding:0px 0px 0px 0px;
+  .logo{
+    display: none;
   }
 }
+
+  @media(max-width:426px){
+   
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    background: #111;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .nav-right > div {
+    width: 100%;
+    padding: 0px 40% 0px 0%;
+    border-bottom: 1px solid #333;
+    color: white;
+  }
+
+  .dropdown, .dropdown1 {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    background: #222;
+  }
+
+  .dropdown-item, .dropdown-item1 {
+    color: #fff;
+    padding-left: 20px;
+  }
+
+ 
+  .desination img,
+  .categortes img {
+    float: right;
+    transform: rotate(90deg);
+  }
+
+
+  .logo {
+    margin-top: 10px;
+  }
+
+  // efvreg
+
+  .mobile-menu-btn {
+   
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    padding: 13px 0px 0px 25% ;
+   
+   
+  }
+
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #111;
+    animation: slideDown 0.4s ease;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 40% 0px 0px;
+  }
+
+  .nav-right.show {
+    display: flex;
+  }
+
+  .nav-right > div {
+    width: 100%;
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    color: white;
+  }
+
+  .dropdown, .dropdown1 {
+    position: static;
+    display: none;
+    background: #222;
+    padding: 0px 0px 0px 0px;
+   
+  }
+
+  .desination.open .dropdown,
+  .categortes.open .dropdown1 {
+    display: block;
+  }
+
+
+/* Slide effect */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+  }
+
+
+  }
