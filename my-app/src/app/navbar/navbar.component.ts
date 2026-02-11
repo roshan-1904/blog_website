@@ -7,63 +7,38 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  
+
   isMenuOpen = false;
   isDestinationOpen = false;
   isCategoryOpen = false;
-  constructor( private router:Router) { }
 
-  
-
-  ngOnInit(): void {
+  constructor(private router: Router) {
+    this.router.events.subscribe(() => {
+      this.closeMenu();
+    });
   }
 
-    toggleMenu() {
+  ngOnInit(): void {}
+
+  toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    document.body.classList.toggle('menu-open', this.isMenuOpen);
   }
 
-  toggleDestination() {
+  toggleDestination(event: Event) {
+    event.stopPropagation();
     this.isDestinationOpen = !this.isDestinationOpen;
   }
 
-  toggleCategory() {
+  toggleCategory(event: Event) {
+    event.stopPropagation();
     this.isCategoryOpen = !this.isCategoryOpen;
   }
 
-  goToHome() {
-    this.router.navigate(['/main']);
-  }
-  
-  goToAbout() {
-    this.router.navigate(['/about']);
-  }
-
-  goToContact() {
-    this.router.navigate(['/contact']);
-  }
-
-  gopToBlog() {
-    this.router.navigate(['/blog']);
-  }
-  goToGallery() {
-    this.router.navigate(['/gallery']);
-  }
-
-
-  goToGames() {
-    this.router.navigate(['/games']);
-  }
-  goToIndia() {
-    this.router.navigate(['/india']);
-  }
-   goToUSA() {
-    this.router.navigate(['/usa']);
-  }
-goToCanada() {
-    this.router.navigate(['/canada']);
-  }
-
-  goToAdmin() {
-    this.router.navigate(['/admin']);
+  closeMenu() {
+    this.isMenuOpen = false;
+    this.isDestinationOpen = false;
+    this.isCategoryOpen = false;
+    document.body.classList.remove('menu-open');
   }
 }

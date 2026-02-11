@@ -244,7 +244,7 @@ body{
   left: 0;
   bottom: 26px;
   width: 0;
-  height: 2px;
+  height: 2px;  
   background-color: orange;
   transition: width 0.3s ease;
 }
@@ -362,7 +362,7 @@ body{
 }
 .nav-right{
     display: flex;
-    gap: 24px;
+    gap: 14px;
     padding: 30px 0px 0px 40px;
 }
 
@@ -404,99 +404,80 @@ body{
   }
 }
 
-  @media(max-width:426px){
-   
+
+@media (max-width: 426px) {
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    padding: 12px 16px;
+  }
+
   .nav-right {
-    flex-direction: column;
-    align-items: flex-start;
-    background: #111;
+    position: fixed;
+    top: 0;
+    right: -100%;
     width: 100%;
-    padding: 15px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    flex-direction: column;
+    padding: 20px;
+    transition: right 0.4s ease-in-out;
+    z-index: 9999;
+  }
+
+  .nav-right.show {
+    right: 0;
   }
 
   .nav-right > div {
     width: 100%;
-    padding: 0px 40% 0px 0%;
-    border-bottom: 1px solid #333;
+    padding: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
     color: white;
+    font-size: 16px;
   }
 
   .dropdown, .dropdown1 {
     position: static;
     width: 100%;
-    box-shadow: none;
-    background: #222;
+    display: none;
+    background: rgba(255,255,255,0.05);
+    margin-top: 6px;
   }
 
-  .dropdown-item, .dropdown-item1 {
+  .desination.open .dropdown,
+  .categortes.open .dropdown1 {
+    display: block;
+    animation: drop 0.3s ease;
+  }
+
+  .dropdown-item,
+  .dropdown-item1 {
+    padding: 10px 20px;
     color: #fff;
-    padding-left: 20px;
   }
 
- 
   .desination img,
   .categortes img {
     float: right;
     transform: rotate(90deg);
   }
 
-
   .logo {
-    margin-top: 10px;
+    margin-top: 20px;
+    text-align: center;
   }
 
-  // efvreg
-
-  .mobile-menu-btn {
-   
-    font-size: 26px;
-    color: white;
-    cursor: pointer;
-    padding: 13px 0px 0px 25% ;
-   
-   
+  @keyframes drop {
+    from {opacity: 0; transform: translateY(-5px);}
+    to {opacity: 1; transform: translateY(0);}
   }
-
-  .nav-right {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #111;
-    animation: slideDown 0.4s ease;
-    padding: 0px 0px 0px 0px;
-    margin: 0px 40% 0px 0px;
-  }
-
-  .nav-right.show {
-    display: flex;
-  }
-
-  .nav-right > div {
-    width: 100%;
-    padding: 12px;
-    border-bottom: 1px solid #333;
-    color: white;
-  }
-
-  .dropdown, .dropdown1 {
-    position: static;
-    display: none;
-    background: #222;
-    padding: 0px 0px 0px 0px;
-   
-  }
-
-  .desination.open .dropdown,
-  .categortes.open .dropdown1 {
-    display: block;
-  }
-
-
-/* Slide effect */
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to   { opacity: 1; transform: translateY(0); }
-  }
-
-
-  }
+}

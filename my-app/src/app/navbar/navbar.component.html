@@ -15,20 +15,20 @@
           
 
                 <div class="nav-right" [class.show]="isMenuOpen">  >
-                     <div class="home" routerLink="/main">Home</div>
-                     <div class="blog" routerLink="/blog">BLOG</div>
-                     <div class="desination" (click)="toggleDestination()">DESINATION <img src="https://cdn-icons-png.flaticon.com/512/8213/8213476.png" alt="" width="16" height="17">
+                     <div class="home" routerLink="/main" (click)="closeMenu()">Home</div>
+                     <div class="blog" routerLink="/blog" (click)="closeMenu()">BLOG</div>
+                     <div class="desination" [class.open]="isDestinationOpen" (click)="toggleDestination($event)">DESINATION <img src="https://cdn-icons-png.flaticon.com/512/8213/8213476.png" alt="" width="16" height="17">
                           <div class="dropdown" *ngIf="isDestinationOpen">
-                                           <div class="dropdown-item" routerLink="/india">INDIA</div>
-                                           <div class="dropdown-item" routerLink="/usa">USA</div>
-                                           <div class="dropdown-item" routerLink="/canada">CANADA</div>
-                                           <div class="dropdown-item">AUSTRALIA</div>
-                                           <div class="dropdown-item">GERMANY</div>
-                                           <div class="dropdown-item">FRANCE</div>
-                                           <div class="dropdown-item">JAPAN</div>
+                                           <div class="dropdown-item" routerLink="/india" (click)="closeMenu()">INDIA</div>
+                                           <div class="dropdown-item" routerLink="/usa" (click)="closeMenu()">USA</div>
+                                           <div class="dropdown-item" routerLink="/canada" (click)="closeMenu()">CANADA</div>
+                                           <div class="dropdown-item" (click)="closeMenu()">AUSTRALIA</div>
+                                           <div class="dropdown-item" (click)="closeMenu()">GERMANY</div>
+                                           <div class="dropdown-item" (click)="closeMenu()">FRANCE</div>
+                                           <div class="dropdown-item" (click)="closeMenu()">JAPAN</div>
                          </div>
                     </div>
-                     <div class="categortes" (click)="toggleCategory()">CATEGORTES <img src="https://cdn-icons-png.flaticon.com/512/8213/8213476.png" alt="" width="16" height="17">
+                     <div class="categortes" [class.open]="isCategoryOpen" (click)="toggleCategory($event)">CATEGORTES <img src="https://cdn-icons-png.flaticon.com/512/8213/8213476.png" alt="" width="16" height="17">
                          <div class="dropdown1" *ngIf="isCategoryOpen">
                                            <div class="dropdown-item1" routerLink="/games">GAMES</div>
                                            <div class="dropdown-item1">COOKING</div>
@@ -36,9 +36,9 @@
                                            
                          </div>
                     </div>
-                     <div class="gallery" routerLink="/gallery">GALLERY <img src="https://cdn-icons-png.flaticon.com/512/8213/8213476.png" alt="" width="16" height="17"></div>
-                     <div class="about" routerLink="/about">ABOUT</div>
-                     <div class="contact" routerLink="/contact">CONTACT</div>
+                     <div class="gallery" routerLink="/gallery" (click)="closeMenu()">GALLERY <img src="https://cdn-icons-png.flaticon.com/512/8213/8213476.png" alt="" width="16" height="17"></div>
+                     <div class="about" routerLink="/about" (click)="closeMenu()">ABOUT</div>
+                     <div class="contact" routerLink="/contact" (click)="closeMenu()">CONTACT</div>
                     <div class="logo"><img src="https://cdn-icons-png.flaticon.com/512/11741/11741045.png" alt="" width="16" height="16"></div>
                 </div>
             </div>

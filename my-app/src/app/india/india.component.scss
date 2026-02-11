@@ -4,18 +4,35 @@
       width: 76%;
     height: 90vh;
     margin: 0px 160px ;
+    background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.img::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  border-radius: 18px;
 }
 .topic{
     text-align: center;
     font-size: 40px;
     font-weight: 900;
     padding: 20px 0px 0px 0px;
+    color:#fff;
+  letter-spacing:3px;
+  text-shadow:0 5px 15px rgba(0,0,0,0.8);
 }
 .topic1{
     text-align: center;
     font-size: 20px;
     font-weight: 600;
     padding: 10px;
+    color:#ddd;
+  text-shadow:0 5px 10px rgba(0,0,0,0.8);
 }
 .para{
     color: #fffbfb;
@@ -23,6 +40,10 @@
     line-height: 1.6;
     margin: 0px 200px;
     padding: 20% 0px 0px 0px;
+      position: relative;
+  z-index: 2;
+  text-align: center;
+
 }
 
 
@@ -41,6 +62,7 @@
   gap:20px;
   max-width:1200px;
   margin:40px auto;
+   padding: 30px;
 }
 
 
@@ -50,6 +72,22 @@
   padding:15px;
   box-shadow:0 4px 10px rgba(0,0,0,0.15);
   text-align:center;
+  background-image: url("https://theworldtravelguy.com/wp-content/uploads/2021/11/DSCF1664_450.jpg");
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.4s ease;
+}
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,0.85), transparent 60%);
+}
+.card:hover{
+  transform: translateY(-8px) scale(1.03);
 }
 
 .card iframe{
@@ -62,14 +100,23 @@
 .card h3{
   margin-top:10px;
   font-size:18px;
+  color:#fcfbfb;
+   position: relative;
+  z-index: 2;
+  text-shadow:0 4px 10px rgba(0,0,0,0.8)
 }
 
 .card p{
   font-size:14px;
-  color:#555;
+  color:#fcfbfb;
+   position: relative;
+  z-index: 2;
+  text-shadow:0 4px 10px rgba(0,0,0,0.8)
 }
 
  @media (max-width: 768px) {
+  .topic{font-size:28px;}
+  .topic1{font-size:16px;}
   .video-grid{
   display:grid;
   grid-template-columns:repeat(2, 1fr); 
@@ -96,8 +143,31 @@ margin: 0px  12%;
   margin:20px auto;
 }
     .img{
-  width: 75%;
-margin: 0px  10%;
+  width: 100%;
+margin: 0px  0%;
+height: 60vh;
 }
 
+.topic{
+    font-size: 10px;
+    
+    font-weight: 900;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+}
+
+  .para{
+    padding-top: 40%;
+    margin: 0 10px;
+    font-size: 12px;
+  }
+    .topic1{
+    font-size: 14px;
+  }
+   .card{
+    border-radius:14px;
+  }
+  .card iframe{
+    height:180px;
+  }
   }
